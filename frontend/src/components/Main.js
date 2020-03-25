@@ -3,6 +3,8 @@ import {Route,Switch} from 'react-router-dom';
 
 import Login from './Login/Login';
 import Signup from './Signup/Signup';
+import Dashboard from './Dashboard/Dashboard';
+
 // import StudentHome from './Student/Home/Home';
 
 import Navbar from './CommonComponents/Navbar';
@@ -17,7 +19,9 @@ class Main extends Component {
             navRoute = <Navbar />
             }
         else{
+            navRoute = null
         }
+        
 
         return(
             <div>
@@ -25,6 +29,8 @@ class Main extends Component {
                 {navRoute}
                 <Route exact path="/" render={() => <Redirect to="/login" />} />
                 <Route path="/login" component={Login}/>
+                <Route path="/dashboard" component={Dashboard}/>
+                
                 {/* <Route path="/student/profile/:id" component={StudentHome}/> */}
             </div>
         )

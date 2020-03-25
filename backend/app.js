@@ -4,7 +4,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var cors = require('cors');
 var passport = require('passport');
-var studentRouter =  require('./api/student/student.router');
+var accountRouter =  require('./api/account/account.router');
 const { mongoDB} = require('./helperFunctions/config');
 
 
@@ -56,7 +56,7 @@ mongoose.connect(mongoDB, options, (err, res) => {
   app.use(express.json());
 
 
-app.use('/api/student',studentRouter);
+app.use('/api/account',accountRouter);
 
 //start your server on port 3001
 module.exports = app.listen(3001);
