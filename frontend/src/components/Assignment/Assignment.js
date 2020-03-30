@@ -54,5 +54,4 @@ class Assignment extends Component {
        )
     }
 }
-//export Assignment Component
 export default Assignment;

@@ -15,7 +15,6 @@ class Dashboard extends Component {
                     <div className="row">
                         <div className="card col-sm-3">
                             <div className="box-part">
-
                                 <div className="card-header" style={{ backgroundColor: "tomato" }}>
                                     <div className="pull-right more-icon">< i className="icon-ellipsis-vertical icon-2x "></i></div>
                                 </div>
