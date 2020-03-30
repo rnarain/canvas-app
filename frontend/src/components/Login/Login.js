@@ -67,7 +67,6 @@ class Login extends Component {
 
     //submit Login handler to send a request to the node backend
     submitLogin = (e) => {
-        var headers = new Headers();
         //prevent page from refresh
         e.preventDefault();
         const data = {
@@ -117,7 +116,7 @@ class Login extends Component {
                                 <form>
                                     <div className="row">
                                         {errorBox}
-                                        <div className="col-sm-6" ><img className="login-logo" src="/img/canvas_logo_white.png"></img></div>
+                                        <div className="col-sm-6" ><img className="login-logo" src="/img/canvas_logo_white.png" alt="canvas-logo"></img></div>
                                         <div className="col-sm-6 no no-account-links">
                                             <a id="register_link" href="#">
                                                 Need a Canvas Account?

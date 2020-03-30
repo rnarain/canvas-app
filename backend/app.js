@@ -5,13 +5,13 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var passport = require('passport');
 var accountRouter =  require('./api/account/account.router');
-const { mongoDB} = require('./helperFunctions/config');
+const { mongoDB , frontendURL} = require('./helperFunctions/config');
 
 
 app.set('view engine', 'ejs');
 
 //use cors to allow cross origin resource sharing
-app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
+app.use(cors({ origin: frontendURL, credentials: true }));
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -23,7 +23,7 @@ require('./helperFunctions/passport')(passport);
 
 //Allow Access Control
 app.use(function(req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Origin', frontendURL);
     res.setHeader('Access-Control-Allow-Credentials', 'true');
     res.setHeader('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT,DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers');
@@ -50,12 +50,9 @@ mongoose.connect(mongoDB, options, (err, res) => {
     }
 });
 
+app.use(express.json());
 
-
-
-  app.use(express.json());
-
-
+//routes
 app.use('/api/account',accountRouter);
 
 //start your server on port 3001

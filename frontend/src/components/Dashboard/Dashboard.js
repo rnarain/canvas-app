@@ -1,76 +1,12 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import backendServer from "../../webConfig";
+import Navbar from '../CommonComponents/Navbar';
+
 
 
 class Dashboard extends Component {
-    constructor(props) {
-        //Call the constrictor of Super class i.e The Component
-        super(props);
-        //maintain the state required for this component
-        this.state = {
-            basicinfo: "",
-            skills: "",
-            careerObjective: "",
-            education: [],
-            accountInfo: {},
-            experience: [],
-            studentProfileData: {
-                fname: "",
-                lname: "",
-                college: "",
-                yearOfPassing: "",
-                major: "",
-                gpa: "",
-                profilePicURL: ""
-            },
-            editable: false
-        }
-    }
-    //Call the Will Mount to set the auth Flag to false
-    async componentWillMount() {
-        // axios.defaults.withCredentials = true;
-        // //make a post request with the user data
-        // await axios.get(`${backendServer}/api/account/getStudentDetails/${this.props.match.params.id}`)
-        //     .then(response => {
-        //         console.log(response);
-        //         let studentProfile =  response.data.data.studentprofile[0];
-        //         let education =  response.data.data.education[0];
-
-        //         this.setState({
-        //             education : response.data.data.education,
-        //             experience : response.data.data.experience,
-        //             accountInfo : response.data.data.accountInfo[0],
-        //             studentProfileData:{
-        //                 fname:studentProfile.fname,
-        //                 lname:studentProfile.lname,
-        //                 college:education.college,
-        //                 degreeType : education.degreeType,
-        //                 yearOfPassing:education.yearOfPassing,
-        //                 major:education.major,
-        //                 gpa:education.gpa,
-        //                 profilePicURL:studentProfile.profilePicURL
-        //             },
-        //             careerObjective: studentProfile.careerObjective,
-        //             skills: studentProfile.skills, 
-        //         })
-        //         //console.log(this.state.studentProfileData)
-
-        //         if(this.props.match.params.id == localStorage.getItem('id')){
-        //             this.setState({
-        //                 editable:true
-        //             })
-        //         }
-        //     }
-        //     ).catch( ex =>{
-        //         this.setState({
-        //             authFlag: false
-        //         })
-        //     });
-    }
-
     render() {
         return (
+            <div><Navbar />
             <div className="canvas-body container  col-sm-10">
                 <div className="page-title ">
                     <h1>Dashboard</h1>
@@ -256,7 +192,7 @@ class Dashboard extends Component {
                         </div>
 
                     </div>
-
+                    </div>
                 </div>
             </div>
         )
