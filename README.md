@@ -23,6 +23,9 @@ CANVAS Assignment with MERN stack
 2. Execute `npm test` to run the tests.
 #### Launch the application
 Open the browser and navigate to Front end server's IP address with Port number (Eg: localhost:3000) to find the landing page.
+#### Login credentials 
+email: narain@gmail.com
+password: 123456
 #### Screens
 <img src="screens/dashboard.PNG" width="90%"></img>
 <img src="screens/login-page.PNG" width="45%"></img>
