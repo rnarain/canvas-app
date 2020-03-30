@@ -4,6 +4,7 @@ CANVAS Assignment with MERN stack
 1. Backend testing using Mocha & Chai
 2. JWT token based authentication using passport.js
 3. Separate repository,controller and route layers in backend
+4. EsLint to maintain code quality
 ### Steps to deploy the application
 #### Frontend
 1. Clone the repository's front end folder "frontend" into any machine having node.js installed on it.
