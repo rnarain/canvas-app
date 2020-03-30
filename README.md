@@ -23,6 +23,7 @@ CANVAS Assignment with MERN stack
 2. Execute `npm test` to run the tests.
 #### Launch the application
 Open the browser and navigate to Front end server's IP address with Port number (Eg: localhost:3000) to find the landing page.
-
+#### Screens
+<img src="frontend/public/favicon.ico" width="45%"></img>
 
 
