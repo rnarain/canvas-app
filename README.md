@@ -3,7 +3,7 @@ CANVAS Assignment with MERN stack
 ## Key features
 1. Backend testing using Mocha & Chai
 2. JWT token based authentication using passport.js
-3. Separate repository,controller and route layers in backend
+3. MVC design pattern
 4. EsLint to maintain code quality
 ### Steps to deploy the application
 #### Frontend
